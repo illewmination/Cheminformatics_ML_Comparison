@@ -1,5 +1,9 @@
 # Cheminformatics_ML_Comparison
 
+Code for "A Brief Survey of ML Methods Predicting Molecular Solubility: Towards Lighter Models via Attention and Hyperparameter Optimization"
+
+Reference: Lew, A. A Brief Survey of ML Methods Predicting Molecular Solubility: Towards Lighter Models via Attention and Hyperparameter Optimization. Preprints 2024, 2024090849. https://doi.org/10.20944/preprints202409.0849.v1 
+
 A comparative illustration on predicting molecular properties from chemical structure using RDKit, scikit-learn, and PyTorch - from simple Linear Regression to Bayesian Optimized Transformer Encoder Networks. 
 
 Here I use the MoleculeNet ESOL dataset (https://moleculenet.org/datasets-1), which provides water solubility data (log solubility in mols/L) for common organic small molecules. First, various molecular representations (RDKit fingerprint, Morgan fingerprint, and a vector of selected molecular features) are used to train a series of regression models (linear, ridge, lasso, and multilayer perceptron). Next, convolution and attention-based graph neural networks are used on a node and edge representation of the atoms and bonds, respectively, to address drawbacks with the previous methodologies. Finally, I adapt a transformer encoder layer to predict solubilities directly from SMILES strings in an approach analogous to linguistic sentiment analysis - treating SMILES as "linguistic passages" and solubilities as the "sentiment".
